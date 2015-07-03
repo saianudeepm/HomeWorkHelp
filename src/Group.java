@@ -1,7 +1,7 @@
 /**
  * Created by saianudeepm on 7/2/15.
  */
-public class Group {
+public class Group implements Displayable {
     
    protected Person[] members;
    
@@ -20,6 +20,10 @@ public class Group {
        
        
    }
-    
-    
+
+
+    @Override
+    public void display() {
+
+    }
 }

@@ -1,7 +1,7 @@
 /**
  * Created by saianudeepm on 7/2/15.
  */
-public class Person {
+public class Person implements Displayable, Workable{
     
     private String name;
     
@@ -14,5 +14,19 @@ public class Person {
         
         return 0;
     }
-    
+
+    @Override
+    public void display() {
+
+    }
+
+    @Override
+    public void doWork() {
+
+    }
+
+    @Override
+    public double getAnnualIncome() {
+        return 0;
+    }
 }
