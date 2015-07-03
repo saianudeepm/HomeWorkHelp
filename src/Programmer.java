@@ -17,9 +17,9 @@ public class Programmer extends Person {
         return salary;
     }
 
-    @Override
+   @Override
     public void display() {
-        System.out.println("Name:" +this.getName() + " skills:"+skills);
+        System.out.println("Name:" +this.getName() + " skills:"+skills + " Annual salary:"+getAnnualIncome());
     }
 
     @Override

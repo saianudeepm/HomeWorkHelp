@@ -30,9 +30,13 @@ public abstract class Group implements Displayable {
         this.members[pos]=member;
     }
 
-
     @Override
     public void display() {
-
+        System.out.println("Group Name:"+this.groupName + " \nMembers: ");
+        
+        for(Person person: getMembers()){
+            person.display();
+            
+        }
     }
 }

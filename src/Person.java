@@ -13,7 +13,10 @@ public abstract class Person implements Displayable, Workable{
     public abstract double  getMonthlySalary();
 
     @Override
-    public abstract void display();
+    public void display(){
+        System.out.println("Name:" +getName() +"Annual salary:"+getAnnualIncome());
+        
+    }
 
     @Override
     public abstract void doWork();
@@ -24,7 +27,6 @@ public abstract class Person implements Displayable, Workable{
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

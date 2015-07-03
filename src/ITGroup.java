@@ -5,16 +5,15 @@ import java.util.ArrayList;
  */
 public class ITGroup extends Group {
 
+    public Project[] getProjects() {
+        return projects;
+    }
+
     protected Project[] projects;
 
     public ITGroup(Project[] projects, String groupName) {
         super(groupName);
         this.projects = projects;
-    }
-
-    public void setProjects(int pos, Project project) {
-        this.projects[pos] = project;
-
     }
 
     public Project findLargestProject() {
@@ -49,6 +48,17 @@ public class ITGroup extends Group {
             
         }
 
+    }
+    
+    @Override
+    public void display() {
+        super.display();
+        System.out.println("Projects:");
+        for(Project project: getProjects()){
+            project.display();
+
+        }
+        
     }
 
 }
