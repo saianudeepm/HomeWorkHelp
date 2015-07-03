@@ -1,32 +1,31 @@
 /**
  * Created by saianudeepm on 7/2/15.
  */
-public class Person implements Displayable, Workable{
+public abstract class Person implements Displayable, Workable{
     
     private String name;
     
     //constructor
     public Person (String name){
         
-        
+        this.name=name;
     }
-    public double getMonthlySalary(){
-        
-        return 0;
-    }
+    public abstract double  getMonthlySalary();
 
     @Override
-    public void display() {
-
-    }
+    public abstract void display();
 
     @Override
-    public void doWork() {
-
-    }
+    public abstract void doWork();
 
     @Override
-    public double getAnnualIncome() {
-        return 0;
+    public abstract double getAnnualIncome();
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

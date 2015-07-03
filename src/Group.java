@@ -1,25 +1,34 @@
 /**
  * Created by saianudeepm on 7/2/15.
  */
-public class Group implements Displayable {
-    
-   protected Person[] members;
-   
-   private String groupName(){
-       
-    return null;   
-   }
-   
-   //constructor
-   Group(){
-       
-       
-   }
-    
-   public void setMember(int pos, Person member){
-       
-       
-   }
+public abstract class Group implements Displayable {
+
+    private String groupName;
+
+    public Person[] getMembers() {
+        return members;
+    }
+
+    public void setMembers(Person[] members) {
+        this.members = members;
+    }
+
+    protected Person[] members;
+
+    private String groupName() {
+
+        return this.groupName;
+    }
+
+    //constructor
+    Group(String groupName) {
+        this.groupName = groupName;
+
+    }
+
+    public void setMember(int pos, Person member){
+        this.members[pos]=member;
+    }
 
 
     @Override
